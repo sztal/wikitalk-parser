@@ -33,10 +33,12 @@ setup(
         *find_packages()
         #'wikitalk_parser',
     ],
-    setup_requires=['pytest-runner'],
+    setup_requires=[
+        'pytest-runner',
+        'pylint'
+    ],
     tests_require=[
         'pytest',
-        'pylint',
         'pytest-pylint',
         'coverage'
     ],
@@ -44,19 +46,22 @@ setup(
     package_dir={'wikitalk_parser': 'wikitalk_parser'},
     include_package_data=True,
     install_requires=[
+        'python-dateutil>=2.8'
     ],
     license='MIT',
     zip_safe=False,
     keywords='wikitalk_parser',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
+        'Natural Language :: English'
+        'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: Implementation :: PyPy',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: Implementation :: CPython'
     ],
 )

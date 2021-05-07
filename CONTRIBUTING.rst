@@ -95,15 +95,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 3.5, 3.6 and 3.7 and for PyPy.
+3. The pull request should work for Python 3.7, 3.8 and 3.9.
    Check https://travis-ci.org/sztal/wikitalk-parser
    under pull requests for active pull requests or run the ``tox`` command and
    make sure that the tests pass for all supported Python versions.
-
-
-Tips
-----
-
-To run a subset of tests::
-
-	 $ py.test test/test_wikitalk_parser.py
