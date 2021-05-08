@@ -5,6 +5,9 @@ Wikitalk parser
 .. image:: https://travis-ci.org/sztal/wikitalk-parser.png?branch=master
     :target: https://travis-ci.org/sztal/wikitalk-parser
 
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4743619.svg
+   :target: https://doi.org/10.5281/zenodo.4743619
+
 
 Wikipedia talk threads parser aware of outdent formatting.
 It is a simple yet relatively efficient pure Python implementation

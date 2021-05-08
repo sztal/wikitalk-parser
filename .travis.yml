@@ -16,3 +16,7 @@ install:
 # command to run tests, e.g. python setup.py test
 script:
   - pytest
+  - pytest --cov-report term --cov wikitalk_parser
+
+after_success:
+  - codecov
