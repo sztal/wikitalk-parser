@@ -40,11 +40,7 @@ test-all:
 	clean-tox
 
 coverage:
-	coverage run --source wikitalk_parser setup.py test
-	coverage report -m
-	coverage html
-	xdg-open htmlcov/index.html
-	# open htmlcov/index.html
+	pytest --cov
 
 docs:
 	rm -f docs/wikitalk_parser.rst

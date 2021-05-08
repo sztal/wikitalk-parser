@@ -40,7 +40,7 @@ setup(
     tests_require=[
         'pytest',
         'pytest-pylint',
-        'coverage'
+        'pytest-cov'
     ],
     test_suite='tests',
     package_dir={'wikitalk_parser': 'wikitalk_parser'},

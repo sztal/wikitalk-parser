@@ -53,21 +53,22 @@ class WikiParserThreadsRX(WikiParserRX):
 class WikiParserThreads(WikiParser):
     """Parser for threads on Wikipedia talk pages.
 
-    This parser is based on some assumptions about the structure of talk
-    pages which are usually correct, but in some cases it may produce
-    somewhat distorted results (i.e. multiple posts lumped into one).
+    The parser is based on some assumptions about the structure of talk
+    pages which are usually correct, but in some cases may lead to
+    somewhat distorted results (e.g. multiple posts lumped into one).
 
-    The main assumption used by the parser is that posts of individual
+    The main assumption is that posts of individual
     users are signed properly so they end with a signature including
-    userpage link and a timestamp. In our experience most of discussion
-    consist of almost exclusively messages with proper signatures.
-    However, some posts may not have correct signatures and in such a case
-    they may not be extracted at all or unsigned posts may be lumped with
-    previous properly signed posts.
+    userpage link and a (UTC) timestamp. In our experience
+    most of discussions (at least on English Wikipedia) consist almost exclusively
+    of messages with proper signatures. However, some posts may not have correct
+    signatures  and in such a case they may not be extracted at all or unsigned
+    posts may be lumped together with previous properly signed posts.
 
     The second main assumption is that different discussion threads on a single
     talk page are separated by section headers starting  which can be detected
-    with ``^\\s*==+\\s*`` regex.
+    with ``^\\s*==+\\s*`` regex. Again, this a very common convention on Wikipedia
+    but in some rare cases it may not be followed leading to incorrect results.
 
     Attributes
     ----------
