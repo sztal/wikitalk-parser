@@ -23,7 +23,7 @@ class WikiParserThreadsRX(WikiParserRX):
         r"[\s\W]*\(UTC\)\s*$",
         re.IGNORECASE
     )
-    depth = re.compile(r"^\s[:\*#]+")
+    depth = re.compile(r"^\s*[:\*#]+")
     outdent = re.compile(
         r"^\s*[:\*#]*\{\{(outdent|od)\d?(\|(\d+|:+))?\}\}"
     )
@@ -80,7 +80,7 @@ class WikiParserThreads(WikiParser):
     # Class attributes
     rx = WikiParserThreadsRX
 
-    # ###########################################################################
+    # -------------------------------------------------------------------------
 
     def parse(self, sanitize_content: bool = True) -> Iterable[dict]:
         """Parse posts in threads.
